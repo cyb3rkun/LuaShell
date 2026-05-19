@@ -1,0 +1,6 @@
+SUPR = "SUPER+"
+ALT = "ALT+"
+CTL = "CTRL+"
+ENTR = "RETURN"
+SHFT = "SHIFT+"
+ESC = "ESCAPE"
