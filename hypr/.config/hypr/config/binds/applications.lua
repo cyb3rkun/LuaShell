@@ -17,3 +17,8 @@ hl.bind(
 	ALT .. "print",
 	hl.dsp.exec_cmd "grimblast copysave output ~/Pictures/screenshots/screenshot-$(date +%Y-%m-%d-%H%M%S).png"
 )
+
+hl.bind(
+	SUPR .. SHFT .. "B",
+	hl.dsp.exec_cmd "pkill quickshell && quickshell &"
+)
