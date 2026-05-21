@@ -16,7 +16,7 @@ PopupWindow {
     anchor.rect.x: 0
     anchor.rect.y: anchorWindow ? anchorWindow.height : 0
 
-    implicitWidth: contentText.implicitWidth + 24
+    implicitWidth: contentText.implicitWidth  
     implicitHeight: contentText.implicitHeight + 24
 
     Timer {
@@ -36,7 +36,7 @@ PopupWindow {
         Text {
             id: contentText
             anchors.centerIn: parent
-            width: 300
+            width: popup.width - 24
             text: popup.content
             color: "white"
             wrapMode: Text.WordWrap
