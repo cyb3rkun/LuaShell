@@ -1,2 +1,4 @@
+module qs.Singletons
 singleton Colors 1.0 Colors.qml
 singleton Time 1.0 Time.qml
+singleton Tips 1.0 Tips.qml

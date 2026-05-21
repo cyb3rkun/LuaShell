@@ -1,0 +1,122 @@
+[
+	{
+		"pretext": "Did you know:",
+		"content": "Lua has no integer type — all numbers are doubles by default (or 64-bit floats in Lua 5.3+), so 1 and 1.0 are the same value."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Return multiple values from a function without wrapping them in a table: function minmax(a,b)\n\treturn math.min(a,b), math.max(a,b)\nend"
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "The only falsy values in Lua are false and nil. Unlike most languages, 0 and empty string '' are both truthy."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Swap two variables in one line without a temp variable: a, b = b, a"
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Tables are the only data structure in Lua — they serve as arrays, dictionaries, objects, modules, and namespaces all at once."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Call a function with a string or table literal without parentheses: print 'hello' and myfunc{key='value'} are both valid syntax."
+	},
+	{
+		"pretext": "Watch out:",
+		"content": "The # operator is undefined for tables with holes. {1, nil, 3} might return 1 or 3 depending on the implementation."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Emulate ternary expressions using and/or: local max = a > b and a or b — though this breaks if the truthy branch is itself falsy."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Lua string indices are 1-based, and negative indices count from the end: string.sub('hello', -3) returns 'llo'."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Define methods using colon syntax: function MyTable:greet() print(self.name) end — the colon implicitly passes the table as 'self'."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Metatables let you overload operators — define __add, __index, __tostring and more to make custom tables behave like built-in types."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Use __index as a function in a metatable to compute missing keys dynamically, rather than just delegating to another table."
+	},
+	{
+		"pretext": "A neat trick:",
+		"content": "string.format('%q', str) produces a quoted, escaped Lua string literal — useful for serializing strings safely."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Lua closures capture variables by reference, not by value. If you close over a loop variable, all closures share the same variable."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Create truly private state using closures — variables inside a factory function are inaccessible from outside, with no special keyword needed."
+	},
+	{
+		"pretext": "Watch out:",
+		"content": "The 'not equal' operator in Lua is ~= not !=. Writing != will cause a syntax error."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Lua's coroutines are stackful — you can yield from deep inside a call stack, unlike most iterator-based generators in other languages."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Use coroutine.wrap() to turn a coroutine into a plain callable function, making it much easier to use as a stateful iterator."
+	},
+	{
+		"pretext": "A neat trick:",
+		"content": "ipairs stops at the first nil, but pairs iterates all keys including non-sequential ones. Know which you need before iterating a table."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "require() caches its result in package.loaded — calling require twice on the same module returns the same object without re-running the file."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Unload and force a module to re-execute by setting package.loaded['mymodule'] = nil before calling require again."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "The global environment in Lua is just a regular table called _G. You can iterate it with pairs(_G) to inspect all globals at runtime."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Prevent accidental global variable creation by setting a __newindex metamethod on _G that throws an error for unknown keys."
+	},
+	{
+		"pretext": "A neat trick:",
+		"content": "table.concat(t, sep) is much faster than concatenating strings in a loop with .. — use it whenever building strings from many parts."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "String concatenation with .. always allocates a new string. For many joins, collect parts in a table and use table.concat at the end."
+	},
+	{
+		"pretext": "In Lua, it's possible to",
+		"content": "Use select('#', ...) inside a variadic function to get the true count of arguments passed, including trailing nils that # would miss."
+	},
+	{
+		"pretext": "Watch out:",
+		"content": "local function f() end and local f = function() end are nearly identical, but only the first form allows f to call itself recursively by name."
+	},
+	{
+		"pretext": "Did you know:",
+		"content": "Lua patterns are not full regular expressions — they lack alternation (|) but are faster and simpler. Use %d, %a, %s for digit, letter, and space classes."
+	},
+	{
+		"pretext": "In Lua, you can",
+		"content": "Capture substrings in patterns using parentheses: string.match('2026-05-21', '(%d+)-(%d+)-(%d+)') returns '2026', '05', '21' as three separate values."
+	},
+	{
+		"pretext": "A neat trick:",
+		"content": "You can give a table a human-readable name for debugging by setting a __name field in its metatable — some error messages and debuggers will show it."
+	}
+]
