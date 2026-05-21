@@ -37,7 +37,7 @@ local default_servers = {
 	-- "omnisharp",
 	-- "gopls",
 	"fish_lsp",
-	-- "qmlls",
+	"qmlls",
 	"astro",
 	-- "rnix",
 	-- "nil_ls",
@@ -53,12 +53,9 @@ local default_servers = {
 
 for _, s in ipairs(default_servers) do
 	-- ccfg = custom config
-	local has_ccfg, ccfg = pcall(require, "lsp." .. s)
+	-- local has_ccfg, ccfg = pcall(require, "lsp." .. s)
 
 	local cfg = { capabilities = capabilities }
-	if has_ccfg and type(ccfg) == "table" then
-		cfg = vim.tbl_deep_extend("force", cfg, ccfg)
-	end
 	vim.lsp.config(s, cfg)
 	vim.lsp.enable(s)
 end
