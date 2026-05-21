@@ -2,6 +2,7 @@ import Quickshell // for PanelWindow
 import QtQuick // for Text
 import Quickshell.Io
 import qs.Singletons
+import qs.Components
 import "Mods"
 
 Scope {
@@ -34,7 +35,7 @@ Scope {
 				right: true
 			}
 
-			implicitHeight: 30
+			implicitHeight: 28
 
 			// Left Anchor
 			Row {
@@ -45,6 +46,10 @@ Scope {
 				WorkspaceMod {
 					targetScreen: panelBar.modelData
 				}
+				TipMod {
+					targetScreen: panelBar.modelData
+					parentWindow: panelBar
+				}
 			}
 			// Center Anchor
 			Row {
@@ -54,11 +59,27 @@ Scope {
 			}
 			// Right Anchor
 			Row {
+				// anchors.centerIn: parent
+				// anchors.horizontalAlignment: Text.AlignHCenter
+				// anchors.horizontalCenter: parent.horizontalCenter
+				// anchors.verticalCenter: parent.verticalCenter
 				anchors.right: parent.right
 				anchors.rightMargin: 10
 				anchors.verticalCenter: parent.verticalCenter
+				// anchors.right: parent.right
+				// anchors.horizontalCenterOffset: 0
 				spacing: 10
-				Text {
+				AText {
+					// anchors.centerIn: parent
+					// anchors.horizontalAlignment: Text.AlignHCenter
+					// anchors.horizontalCenter: parent.horizontalCenter
+					// anchors.verticalCenter: parent.verticalCenter
+					// anchors.right: parent.right
+					anchors.rightMargin: 10
+					anchors.verticalCenter: parent.verticalCenter
+					anchors.verticalCenterOffset: 4
+					// anchors.right: parent.right
+					// anchors.horizontalCenterOffset: 0
 					text: "Hello World"
 					color: "white"
 					height: 30
