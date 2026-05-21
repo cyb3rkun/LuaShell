@@ -12,6 +12,7 @@ Either one of the following will work
 - Hyprland
     - hyprlauncher
     - pyprpaper
+    - hyprlock
 
 - Optional!
     - fish shell
