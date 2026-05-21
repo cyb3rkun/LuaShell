@@ -1,3 +1,3 @@
 TERM = "wezterm"
 LAUNCHER = "hyprlauncher"
-FM = "thunar"
+FM = "dolphin"
