@@ -1,1 +1,6 @@
-scope {}
+import Quickshell
+import "Bar"
+
+Scope {
+	Bar { }
+}
