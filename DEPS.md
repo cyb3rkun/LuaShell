@@ -8,12 +8,26 @@
     - qt6svg
 - Notification Daemon
 Either one of the following will work
-    - dunst
     - mako
 - Hyprland
     - hyprlauncher
     - pyprpaper
 
-- fish shell
-- wezterm terminal
+- Optional!
+    - fish shell
+    - wezterm terminal
+- Kvantum
+    - Please install Kvantum
+- Icons
+    - tokyo-night-icons
+        - https://store.kde.org/p/2053446
+        - https://github.com/ljmill/tokyo-night-icons/
+        Downloand and extract this icon pack to `/usr/share/icons/`
+        and use qt6ct to set the icon theme to `Tokyo Night-SE`
+
+- Dolphin
+    - This Rice Was designed with the Dolphin File Manager in mind.
+    - For Dolphin to respect the Themes:
+        QT_QPA_PLATFORMTHEME=qt6ct
+
 - wl-clipboard for screenshots
