@@ -37,11 +37,11 @@ for _, bind in ipairs(binds) do
 		if mods ~= "" then mods = mods .. "+" end
 
 		local entry = string.format(
-			"[%s%s] 󰘳 %s",
+			"[%s%s]: %s",
 			mods,
 			bind.key,
 			bind.description
-			
+
 			-- bind.arg
 		)
 		table.insert(lines, entry)
