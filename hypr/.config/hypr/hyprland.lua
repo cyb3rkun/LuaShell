@@ -24,6 +24,7 @@ require("vars.programs")
 ---- MONITORS ----
 ------------------
 require("config.monitor")
+require("config.workspace")
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -45,10 +46,6 @@ require("config.binds.applications")
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
-
-
-
-
 
 -----------------------
 ----- PERMISSIONS -----
