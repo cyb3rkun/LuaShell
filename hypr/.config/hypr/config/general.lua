@@ -1,7 +1,12 @@
-hl.config({
+hl.config {
 	general = {
-		gaps_in = 4,
-		gaps_out = 10,
+		gaps_in = 2,
+		gaps_out = {
+			top = 2,
+			right = 8,
+			left = 8,
+			bottom = 8,
+		},
 
 		border_size = 1,
 
@@ -47,4 +52,35 @@ hl.config({
 	animations = {
 		enabled = true,
 	},
-})
+}
+-- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
+hl.config {
+	dwindle = {
+		preserve_split = true, -- You probably want this
+	},
+}
+
+-- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
+hl.config {
+	master = {
+		new_status = "master",
+	},
+}
+
+-- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
+hl.config {
+	scrolling = {
+		fullscreen_on_one_column = true,
+	},
+}
+
+----------------
+----  MISC  ----
+----------------
+
+hl.config {
+	misc = {
+		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+	},
+}
