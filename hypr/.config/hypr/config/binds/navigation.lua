@@ -1,15 +1,36 @@
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(SUPR .. "V", hl.dsp.window.float({ action = "toggle" }), {desc = "Toggle Float"})
-hl.bind(SUPR .. "F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(
+	SUPR .. "V",
+	hl.dsp.window.float { action = "toggle" },
+	{ desc = "Toggle Float" }
+)
+hl.bind(
+	SUPR .. "F",
+	hl.dsp.window.fullscreen { action = "toggle" },
+	{ desc = "Toggle Fullscreen" }
+)
 -- hl.bind(SUPR .. "P", hl.dsp.window.pseudo())
-hl.bind(SUPR .. SHFT .. "I", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(
+	SUPR .. SHFT .. "I",
+	hl.dsp.layout "togglesplit",
+	{ desc = "Toggle Split Horizontal/Vertical" }
+) -- dwindle only
 --
 -- Switch workspaces with SUPR[0-9]
 -- Move active window to a workspace with SUPRSHIFT + [0-9]
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
-	hl.bind(SUPR .. key, hl.dsp.focus({ workspace = i }))
-	hl.bind(SUPR .. SHFT .. key, hl.dsp.window.move({ workspace = i }))
+	wstr = tostring(i)
+	hl.bind(
+		SUPR .. key,
+		hl.dsp.focus { workspace = i },
+		{ desc = "Focus Workspace " .. wstr }
+	)
+	hl.bind(
+		SUPR .. SHFT .. key,
+		hl.dsp.window.move { workspace = i },
+		{ desc = "Move Window to Workspace " .. wstr }
+	)
 end
 
 local directions = {
@@ -20,27 +41,67 @@ local directions = {
 }
 
 for _, d in ipairs(directions) do
-	hl.bind(SUPR .. d[1], hl.dsp.focus({ direction = d[2] }))
-	hl.bind(SUPR .. SHFT .. d[1], hl.dsp.window.move({ direction = d[2] }))
+	hl.bind(
+		SUPR .. d[1],
+		hl.dsp.focus { direction = d[2] },
+		{ desc = "Focus Window " .. d[2] }
+	)
+	hl.bind(
+		SUPR .. SHFT .. d[1],
+		hl.dsp.window.move { direction = d[2] },
+		{ desc = "Move Window " .. d[2] }
+	)
 end
-hl.bind(SUPR .. "R", hl.dsp.submap("resize"))
+hl.bind(
+	SUPR .. "R",
+	hl.dsp.submap "resize",
+	{ desc = "Enter Resize Submap" }
+)
 hl.define_submap("resize", function()
 	for _, d in ipairs(directions) do
-		hl.bind(d[1], hl.dsp.window.resize({ x = d[3].x, y = d[3].y, relative = true }))
-		hl.bind(ESC, hl.dsp.submap("reset"))
+		hl.bind(
+			d[1],
+			hl.dsp.window.resize {
+				x = d[3].x,
+				y = d[3].y,
+				relative = true,
+			},
+			{ desc = "Resize Window to " .. d[2] }
+		)
 	end
+	hl.bind(
+		ESC,
+		hl.dsp.submap "reset",
+		{ desc = "Exit resize Submap" }
+	)
 end)
 -- Example special workspace (scratchpad)
-hl.bind(SUPR .. "S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(SUPR .. "SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(
+	SUPR .. "S",
+	hl.dsp.workspace.toggle_special "magic",
+	{ desc = "Toggle Workspace [special:magic]" }
+)
+hl.bind(
+	SUPR .. "SHIFT + S",
+	hl.dsp.window.move { workspace = "special:magic" },
+	{ desc = "Move Window to workspace [special:magic]" }
+)
 --
 -- -- Scroll through existing workspaces with SUPRscroll
 -- hl.bind(SUPR .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(SUPR .. "mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- -- Move/resize windows with SUPRLMB/RMB and dragging
-hl.bind(SUPR .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(SUPR .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(
+	SUPR .. "mouse:272",
+	hl.dsp.window.drag(),
+	{ mouse = true, desc = "Move Window By dragging Mouse" }
+)
+hl.bind(
+	SUPR .. "mouse:273",
+	hl.dsp.window.resize(),
+	{ mouse = true, desc = "Resize Window By draggin mouse" }
+)
 
 -- -- Laptop multimedia keys for volume and LCD brightness
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
