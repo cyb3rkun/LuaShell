@@ -1,0 +1,57 @@
+#!/usr/bin/env lua
+
+-- 1. Grab the directory path of this executing script file
+local script_dir = arg[0]:match "(.-)[^/]+$" or "./"
+
+-- 2. Inject this directory into the module search paths
+package.path = script_dir
+	.. "?.lua;"
+	.. script_dir
+	.. "?/init.lua;"
+	.. package.path
+
+local js = require "lua-json"
+local fhandle, err = io.popen "hyprctl -j binds"
+if not fhandle then return end
+
+local raw_json = fhandle:read "*a"
+print(raw_json)
+fhandle:close()
+local binds = js.decode(raw_json)
+
+local lines = {}
+
+for _, bind in ipairs(binds) do
+	if bind.key and bind.key ~= "" then
+		-- Decode the raw modmask bitmask number into a human-readable list
+		local mod_list = {}
+		local mask = bind.modmask or 0
+
+		if (mask & 64) ~= 0 then table.insert(mod_list, "SUPER") end
+		if (mask & 4) ~= 0 then table.insert(mod_list, "CTRL") end
+		if (mask & 8) ~= 0 then table.insert(mod_list, "ALT") end
+		if (mask & 1) ~= 0 then table.insert(mod_list, "SHIFT") end
+
+		-- Combine strings safely now that mod_list is a guaranteed table array
+		local mods = table.concat(mod_list, "+")
+		if mods ~= "" then mods = mods .. "+" end
+
+		local entry = string.format(
+			"[%s%s] 󰘳 %s",
+			mods,
+			bind.key,
+			bind.description
+			
+			-- bind.arg
+		)
+		table.insert(lines, entry)
+	end
+end
+local picker_input = table.concat(lines, "\n")
+
+-- Match your exact binary help layout using the standard dmenu-style stdin stream
+local launcher_pipe = io.popen("hyprlauncher -m", "w")
+if launcher_pipe then
+	launcher_pipe:write(picker_input)
+	launcher_pipe:close()
+end
