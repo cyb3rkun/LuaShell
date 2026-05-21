@@ -1,5 +1,5 @@
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(SUPR .. "V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(SUPR .. "V", hl.dsp.window.float({ action = "toggle" }), {desc = "Toggle Float"})
 hl.bind(SUPR .. "F", hl.dsp.window.fullscreen({ action = "toggle" }))
 -- hl.bind(SUPR .. "P", hl.dsp.window.pseudo())
 hl.bind(SUPR .. SHFT .. "I", hl.dsp.layout("togglesplit")) -- dwindle only
@@ -30,18 +30,18 @@ hl.define_submap("resize", function()
 		hl.bind(ESC, hl.dsp.submap("reset"))
 	end
 end)
--- -- Example special workspace (scratchpad)
--- hl.bind(SUPR .. "S",         hl.dsp.workspace.toggle_special("magic"))
--- hl.bind(SUPR .. "SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- Example special workspace (scratchpad)
+hl.bind(SUPR .. "S",         hl.dsp.workspace.toggle_special("magic"))
+hl.bind(SUPR .. "SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 --
 -- -- Scroll through existing workspaces with SUPRscroll
 -- hl.bind(SUPR .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(SUPR .. "mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
---
+
 -- -- Move/resize windows with SUPRLMB/RMB and dragging
 hl.bind(SUPR .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(SUPR .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
---
+
 -- -- Laptop multimedia keys for volume and LCD brightness
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 -- hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
