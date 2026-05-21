@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Shapes
 import qs.Singletons
 import qs.Shapes
+import qs.Components
 
 Item {
 	width: contentRow.implicitWidth 
@@ -50,38 +51,42 @@ Item {
 
 				ChamferRect {
 					id: bubble
-					width: isActive ? 40: 20
-					height: 15
+					width: isActive ? 40: 24
+					height: 20
 					chamfer: 4
 
 					// Fix 3: Read from the local reactive properties (isActive / isOccupied)
 					fillColor: {
 						if (isActive)
-						return Colors.rgba(Colors.colors.text.focused);
+						return Colors.rgba(Colors.colors.bg.focused);
 						else if (isOccupied)
-						return Colors.rgba(Colors.colors.text.occupied);
+						return Colors.rgba(Colors.colors.bg.occupied);
 						else
-						return Colors.rgba(Colors.colors.text.blank);
+						return Colors.rgba(Colors.colors.bg.inactive);
 					}
 
 					// NOTE: uncomment the block below to show workspace
 					// numbers
-					// Text {
-					// 	id: wsLabel
-					// 	anchors.centerIn: parent
-					// 	text: ws.id
-					// 	font.bold: isActive
-					// 	horizontalAlignment: Text.AlignHCenter
-					// 	verticalAlignment: Text.AlignVCenter
-					// 	color: {
-					// 		if (isActive)
-					// 		return Colors.rgba(Colors.colors?.text?.focused);
-					// 		else if (isOccupied)
-					// 		return Colors.rgba(Colors.colors?.text?.occupied);
-					// 		else
-					// 		return Colors.rgba(Colors.colors?.text?.inactive);
-					// 	}
-					// }
+					AText {
+						id: wsLabel
+						anchors.centerIn: parent
+						text: ws.id
+						font.bold: true
+						horizontalAlignment: Text.AlignHCenter
+						verticalAlignment: Text.AlignVCenter
+						anchors.horizontalCenter: parent.horizontalCenter
+						anchors.verticalCenter: parent.verticalCenter
+						anchors.horizontalCenterOffset: 0
+						anchors.verticalCenterOffset: 1
+						color: {
+							if (isActive)
+							return Colors.rgba(Colors.colors?.text?.focused);
+							else if (isOccupied)
+							return Colors.rgba(Colors.colors?.text?.occupied);
+							else
+							return Colors.rgba(Colors.colors?.text?.inactive);
+						}
+					}
 
 					MouseArea {
 						anchors.fill: parent
