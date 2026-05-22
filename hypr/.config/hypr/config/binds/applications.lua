@@ -20,6 +20,13 @@ hl.bind(
 	{ desc = "Application Launcher" }
 )
 
+-- Color Picker
+hl.bind(
+	CTL .. "F7",
+	hl.dsp.exec_cmd("hyprpicker --autocopy"),
+	{ desc = "Color Picker" }
+)
+
 -- Screenshots
 hl.bind(
 	"PRINT",
