@@ -8,7 +8,7 @@ import qs.Shapes
 import qs.Components
 
 Item {
-	width: contentRow.implicitWidth 
+	width: contentRow.implicitWidth
 	height: 30
 
 	property var targetScreen: null
@@ -27,7 +27,7 @@ Item {
 
 	Row {
 		id: contentRow
-		spacing: 8
+		spacing: 6
 		anchors.centerIn: parent
 
 		Repeater {
@@ -45,15 +45,37 @@ Item {
 				// Component.onCompleted: {
 				// 	console.log("WS", ws.id, "toplevels:", ws.toplevels, "values:", ws.toplevels.values, "values.length:", ws.toplevels.values.length);
 				// }
+				opacity: 0  // start invisible
 
+				Component.onCompleted: {
+					opacity = 1;  // will use the Behavior below
+				}
+
+				Behavior on opacity {
+					NumberAnimation {
+						duration: 500
+						easing.type: Easing.OutCubic
+					}
+				}
+
+				// width: bubble.width
+				// height: bubble.height
 				width: bubble.width
 				height: bubble.height
 
 				ChamferRect {
 					id: bubble
-					width: isActive ? 50: Math.max(28, wsLabel.implicitWidth + 12)
+					width: isActive ? 50 : Math.max(28, wsLabel.implicitWidth + 12)
 					height: 20
 					chamfer: 4
+
+					Behavior on width {
+						SpringAnimation {
+							spring: 8
+							damping: 0.2
+							epsilon: 0.1
+						}
+					}
 
 					fillColor: {
 						if (isActive)
@@ -89,6 +111,7 @@ Item {
 
 					MouseArea {
 						anchors.fill: parent
+						cursorShape: Qt.PointingHandCursor
 						onClicked: ws.activate()
 					}
 				}

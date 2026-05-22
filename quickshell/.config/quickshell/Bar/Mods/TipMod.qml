@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import qs.Singletons
+import qs.Components
 
 Item {
 	id: root
@@ -22,7 +23,7 @@ Item {
 		content: root.currentTip.content
 	}
 
-	Text {
+	AText {
 		id: pretextLabel
 		anchors.centerIn: parent
 		text: root.currentTip.pretext || "Lua tip →"
@@ -31,6 +32,7 @@ Item {
 
 		MouseArea {
 			anchors.fill: parent
+			cursorShape: Qt.PointingHandCursor
 			onClicked: {
 				root.currentTip = Tips.randomTip();
 				if (popup.visible) {
