@@ -46,6 +46,7 @@ require "config.input"
 ---------------------
 require "config.binds.navigation"
 require "config.binds.applications"
+require "config.binds.spaces"
 require "config.binds.extras"
 
 --------------------------------
