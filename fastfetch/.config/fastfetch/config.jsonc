@@ -1,0 +1,113 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"logo": {
+		"source": "~/.config/fastfetch/LuaShell_Logo.png",
+		"type": "kitty-direct",
+		"height": 21,
+		"width": 47
+	},
+
+	"modules": [
+				{
+			"type": "title",
+			"key": "OS",
+			"keyColor": "blue"
+		},
+		{
+			"type": "os",
+			"key": " ├─󰣇 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "kernel",
+			"key": " ├─ ",
+			"format": "{1} {2}",
+			"keyColor": "blue"
+		},
+		{
+			"type": "packages",
+			"key": " ├─󰮯 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "de",
+			"key": " ├─ ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "wm",
+			"key": " ├─ ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "lm",
+			"key": " ╰─󰧨 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "custom",
+			"key": "Theme",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "theme",
+			"key": " ├─󰉼 ",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "icons",
+			"key": " ╰─󰀻 ",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "custom",
+			"key": "Environment",
+			"keyColor": "green"
+		},
+		{
+			"type": "terminal",
+			"key": " ├─ ",
+			"keyColor": "green"
+		},
+		{
+			"type": "terminalfont",
+			"key": " ├─ ",
+			"keyColor": "green"
+		},
+		{
+			"type": "shell",
+			"key": " ╰─ ",
+			"keyColor": "green"
+		},
+		{
+			"type": "custom",
+			"key": "Hardware",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "cpu",
+			"key": " ├─󰍛 ",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "gpu",
+			"key": " ├─󰘚 ",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "display",
+			"key": " ├─󰍹 ",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "memory",
+			"key": " ├─󰑭 ",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "uptime",
+			"key": " ╰─󰅐 ",
+			"keyColor": "yellow"
+		}
+	]
+}
