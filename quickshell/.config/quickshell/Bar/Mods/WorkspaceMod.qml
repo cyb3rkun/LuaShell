@@ -42,20 +42,19 @@ Item {
 				// Fix 2: Explicitly alias the count property to force evaluation updates
 				readonly property int windowCount: ws.toplevels.values.length
 				readonly property bool isOccupied: windowCount > 0
-				Component.onCompleted: {
-					console.log("WS", ws.id, "toplevels:", ws.toplevels, "values:", ws.toplevels.values, "values.length:", ws.toplevels.values.length);
-				}
+				// Component.onCompleted: {
+				// 	console.log("WS", ws.id, "toplevels:", ws.toplevels, "values:", ws.toplevels.values, "values.length:", ws.toplevels.values.length);
+				// }
 
 				width: bubble.width
 				height: bubble.height
 
 				ChamferRect {
 					id: bubble
-					width: isActive ? 40: 24
+					width: isActive ? 50: Math.max(28, wsLabel.implicitWidth + 12)
 					height: 20
 					chamfer: 4
 
-					// Fix 3: Read from the local reactive properties (isActive / isOccupied)
 					fillColor: {
 						if (isActive)
 						return Colors.rgba(Colors.colors.bg.focused);
@@ -70,7 +69,7 @@ Item {
 					AText {
 						id: wsLabel
 						anchors.centerIn: parent
-						text: ws.id
+						text: ws.name.replace(/^[^:]+:/, "")
 						font.bold: true
 						horizontalAlignment: Text.AlignHCenter
 						verticalAlignment: Text.AlignVCenter
