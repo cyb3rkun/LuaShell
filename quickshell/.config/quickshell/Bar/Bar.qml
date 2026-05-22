@@ -59,31 +59,13 @@ Scope {
 			}
 			// Right Anchor
 			Row {
-				// anchors.centerIn: parent
-				// anchors.horizontalAlignment: Text.AlignHCenter
-				// anchors.horizontalCenter: parent.horizontalCenter
-				// anchors.verticalCenter: parent.verticalCenter
 				anchors.right: parent.right
 				anchors.rightMargin: 10
 				anchors.verticalCenter: parent.verticalCenter
-				// anchors.right: parent.right
-				// anchors.horizontalCenterOffset: 0
+
 				spacing: 10
-				AText {
-					// anchors.centerIn: parent
-					// anchors.horizontalAlignment: Text.AlignHCenter
-					// anchors.horizontalCenter: parent.horizontalCenter
-					// anchors.verticalCenter: parent.verticalCenter
-					// anchors.right: parent.right
-					anchors.rightMargin: 10
-					anchors.verticalCenter: parent.verticalCenter
-					anchors.verticalCenterOffset: 4
-					// anchors.right: parent.right
-					// anchors.horizontalCenterOffset: 0
-					text: "Hello World"
-					color: "white"
-					height: 30
-				}
+
+				PowerButton {}
 			}
 		}
 	}
