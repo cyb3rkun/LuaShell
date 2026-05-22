@@ -49,3 +49,9 @@ hl.bind(
 	hl.dsp.exec_cmd "pkill quickshell && quickshell &",
 	{ desc = "Restart Quickshell" }
 )
+-- Wlogout
+hl.bind(
+	SUPR .. "P",
+	hl.dsp.exec_cmd "wlogout -b 5 -T 400 -B 400 -L 300 -R 300",
+	{ desc = "Power Menu" }
+)
