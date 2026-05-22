@@ -1,6 +1,6 @@
 hl.config {
 	general = {
-		gaps_in = 2,
+		gaps_in = 4,
 		gaps_out = {
 			top = 2,
 			right = 8,
