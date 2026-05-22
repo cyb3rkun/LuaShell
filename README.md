@@ -12,7 +12,7 @@ the stow command.
   intended.
 ```bash
 stow -vSt ~ hypr mako quickshell Kvantum assets colors scripts \
-kdeglobals lua-shell fastfetch
+kdeglobals lua-shell fastfetch wlogout
 ```
 The following are other personal configs that you likely don't need or want.
 ```bash
