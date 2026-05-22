@@ -13,6 +13,8 @@ Either one of the following will work
     - hyprlauncher
     - pyprpaper
     - hyprlock
+- Wlogout
+    - hyprshutdown
 
 - Optional!
     - fish shell
