@@ -8,6 +8,11 @@
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 require "config.env"
 
+-------------------
+---- AUTOSTART ----
+-------------------
+require "config.events"
+
 require "vars.keys"
 require "vars.programs"
 
@@ -15,11 +20,6 @@ require "vars.programs"
 ---- MONITORS ----
 ------------------
 require "config.monitor"
-
--------------------
----- AUTOSTART ----
--------------------
-require "config.autostart"
 
 -----------------------
 ----- PERMISSIONS -----
@@ -29,7 +29,6 @@ require "config.perms"
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 require "config.general"
 require "config.animations"
@@ -55,3 +54,4 @@ require "config.binds.extras"
 require "config.rules.window"
 require "config.rules.workspace"
 require "config.rules.layer"
+
