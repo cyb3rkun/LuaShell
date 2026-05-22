@@ -15,6 +15,16 @@ for i = 1, 9 do
 	}
 end
 
+local spcace_l = {
+	{ workspace = "special:games", monitor = "DP-1" },
+	{ workspace = "name:comms", monitor = "Dp-2" },
+	{ workspace = "name:launchers", monitor = "DP-2" },
+}
+
+for _, w in ipairs(spcace_l) do
+	hl.workspace_rule(w)
+end
+
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
