@@ -39,3 +39,4 @@ local monitors = {
 for _, m in ipairs(monitors) do
 	hl.monitor(m)
 end
+
