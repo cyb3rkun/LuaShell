@@ -4,7 +4,7 @@ local monitors = {
 	"desc:Lenovo Group Limited 0x1144 VN-66718",
 }
 
-hl.workspace_rule({workspace = "s[true]", gaps_out = 6})
+hl.workspace_rule { workspace = "s[true]", gaps_out = 6 }
 
 for i = 1, 9 do
 	local monitor_idx = math.ceil(i / 3)
@@ -14,6 +14,9 @@ for i = 1, 9 do
 		persistent = true,
 	}
 end
+hl.dispatch(hl.dsp.focus { workspace = 7 })
+hl.dispatch(hl.dsp.focus { workspace = 4 })
+hl.dispatch(hl.dsp.focus { workspace = 1 })
 
 local spcace_l = {
 	{ workspace = "special:games", monitor = "DP-1" },
