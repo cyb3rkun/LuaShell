@@ -25,6 +25,14 @@ if that's the case use you're own shell config, and to match the
 wezterm config you can just set the `font` and `background color` 
 variables the same.
 
+# Screenshots
+<img width="1920" height="1080" alt="screenshot-2026-05-23-luancher" src="https://github.com/user-attachments/assets/ff88df3f-deb1-4a15-b36c-25154442586c" />
+<img width="1922" height="1085" alt="screenshot-2026-05-23-044008" src="https://github.com/user-attachments/assets/f79e9575-23d3-4bd3-95ae-792344e738c8" />
+<img width="941" height="640" alt="screenshot-2026-05-23-042204" src="https://github.com/user-attachments/assets/b236b866-2e2a-456d-a649-39e4eefddb21" />
+<img width="1920" height="1080" alt="screenshot-2026-05-23-041934" src="https://github.com/user-attachments/assets/ef1a64d0-e5b2-4ddb-ac36-9e4dde8c7e75" />
+<img width="1920" height="1080" alt="screenshot-2026-05-23-041609" src="https://github.com/user-attachments/assets/098b36ed-351e-40d4-a1fb-7d5c32997893" />
+<img width="1920" height="1080" alt="screenshot-2026-05-23-041417" src="https://github.com/user-attachments/assets/f45f6443-5cce-444c-9db7-a8a120e09e53" />
+
 
 ## 📜 Credits & Licensing
 
