@@ -54,13 +54,22 @@ Scope {
 
 			Row {
 				id: cRAnchor
+				spacing: 20
 				anchors.left: cAnchor.right
 				anchors.verticalCenter: parent.verticalCenter
 				anchors.leftMargin: 10
 
+				// Custom LuaShell System Tray menu
+				// Stray {
+				// 	anchors.verticalCenter: parent.verticalCenter
+				// 	// anchors.left: parent.left
+				// 	pwindow: panelBar
+				// }
+
+				// PlatformMenu
 				SysTray {
 					anchors.verticalCenter: parent.verticalCenter
-					anchors.left: parent.left
+					// anchors.left: parent.left
 					// parentWindow: root.parentWindow
 				}
 			}
