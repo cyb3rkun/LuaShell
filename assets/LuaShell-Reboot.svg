@@ -28,13 +28,13 @@
      inkscape:document-units="mm"
      inkscape:zoom="1"
      inkscape:cx="252"
-     inkscape:cy="318.5"
-     inkscape:window-width="1902"
-     inkscape:window-height="1040"
+     inkscape:cy="318"
+     inkscape:window-width="1735"
+     inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="g4" />
   <defs
      id="defs1">
     <filter
@@ -137,19 +137,19 @@
      transform="translate(-169.95,-58.825)">
     <path
        d="m 254,60.325 a 82.549995,82.549995 0 0 0 -82.55,82.55 82.549995,82.549995 0 0 0 82.55,82.55 82.549995,82.549995 0 0 0 82.34071,-76.67542 68.55632,68.55632 0 0 1 -66.46209,51.73999 68.55632,68.55632 0 0 1 -68.55602,-68.55602 68.55632,68.55632 0 0 1 68.55602,-68.55654 68.55632,68.55632 0 0 1 7.95352,0.463021 A 82.549995,82.549995 0 0 0 254,60.325 Z"
-       style="display:inline;fill:#ffffff;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       style="display:inline;fill:#6587b9;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        id="path87" />
     <g
        id="path1"
        style="opacity:1">
       <path
-         style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#6587b9;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;fill-opacity:1"
          d="m 271.97461,90.988281 c -8.9742,-0.318221 -18.05218,2.285938 -25.70117,7.865235 a 4.9783702,4.9783702 0 0 0 -1.08789,6.955074 4.9783702,4.9783702 0 0 0 6.95507,1.08789 c 11.63263,-8.485016 27.48783,-7.922409 38.49024,1.36524 11.00241,9.28765 14.21905,24.8232 7.80664,37.71484 -6.41241,12.89165 -20.74226,19.70232 -34.78711,16.53125 -14.04485,-3.17107 -24.05923,-15.47685 -24.31055,-29.87304 a 4.9783702,4.9783702 0 0 0 -5.06445,-4.89063 4.9783702,4.9783702 0 0 0 -4.89062,5.06445 c 0.3305,18.93234 13.60197,35.23991 32.07226,39.41016 18.47029,4.17025 37.46161,-4.85293 45.89453,-21.80664 8.43292,-16.95372 4.17233,-37.54369 -10.29687,-49.75781 -7.2346,-6.107065 -16.10588,-9.347798 -25.08008,-9.666019 z"
          id="path5" />
       <g
          id="g4">
         <path
-           style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+           style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#6587b9;stroke-linecap:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1;fill-opacity:1"
            d="m 247.00391,71.419922 a 3.9826951,3.9826951 0 0 0 -4.55079,3.318359 l -5.83984,37.324219 37.32227,5.83984 a 3.9826951,3.9826951 0 0 0 4.55078,-3.32031 3.9826951,3.9826951 0 0 0 -3.31836,-4.55078 l -29.45508,-4.60742 4.60938,-29.453127 a 3.9826951,3.9826951 0 0 0 -3.31836,-4.550781 z"
            id="path4" />
       </g>

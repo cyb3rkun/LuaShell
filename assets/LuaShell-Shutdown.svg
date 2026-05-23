@@ -27,10 +27,10 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="1"
-     inkscape:cx="288"
+     inkscape:cx="287.5"
      inkscape:cy="303.5"
-     inkscape:window-width="1920"
-     inkscape:window-height="1080"
+     inkscape:window-width="1654"
+     inkscape:window-height="1094"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -137,10 +137,10 @@
      transform="translate(-171.45,-59.810857)">
     <path
        d="m 254,60.325 a 82.549995,82.549995 0 0 0 -82.55,82.55 82.549995,82.549995 0 0 0 82.55,82.55 82.549995,82.549995 0 0 0 82.34071,-76.67542 68.55632,68.55632 0 0 1 -66.46209,51.73999 68.55632,68.55632 0 0 1 -68.55602,-68.55602 68.55632,68.55632 0 0 1 68.55602,-68.55654 68.55632,68.55632 0 0 1 7.95352,0.463021 A 82.549995,82.549995 0 0 0 254,60.325 Z"
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#6587b9;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
        id="path87" />
     <rect
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#6587b9;stroke-width:10;stroke-dasharray:none;stroke-opacity:1"
        id="rect1"
        width="116.48941"
        height="33.016594"

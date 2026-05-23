@@ -27,14 +27,14 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="1"
-     inkscape:cx="252"
+     inkscape:cx="252.5"
      inkscape:cy="318.5"
-     inkscape:window-width="1902"
-     inkscape:window-height="1040"
+     inkscape:window-width="1504"
+     inkscape:window-height="1082"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="g2" />
   <defs
      id="defs1">
     <filter
@@ -137,13 +137,13 @@
      transform="translate(-169.95,-58.825)">
     <path
        d="m 254,60.325 a 82.549995,82.549995 0 0 0 -82.55,82.55 82.549995,82.549995 0 0 0 82.55,82.55 82.549995,82.549995 0 0 0 82.34071,-76.67542 68.55632,68.55632 0 0 1 -66.46209,51.73999 68.55632,68.55632 0 0 1 -68.55602,-68.55602 68.55632,68.55632 0 0 1 68.55602,-68.55654 68.55632,68.55632 0 0 1 7.95352,0.463021 A 82.549995,82.549995 0 0 0 254,60.325 Z"
-       style="display:inline;fill:#ffffff;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       style="display:inline;fill:#6587b9;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        id="path87" />
     <g
        id="g2"
        transform="translate(-9.2326945,-0.76600145)">
       <rect
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:12;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:#6587b9;fill-opacity:1;stroke:#6587b9;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1"
          width="16.933348"
          height="58.737495"
@@ -151,7 +151,7 @@
          y="103.01041"
          ry="1.8520828" />
       <rect
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:12;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:#6587b9;fill-opacity:1;stroke:#6587b9;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect2"
          width="16.933348"
          height="58.737495"
