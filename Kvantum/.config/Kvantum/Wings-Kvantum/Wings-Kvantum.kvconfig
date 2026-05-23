@@ -425,6 +425,15 @@ frame.expansion=18
 inherits=PanelButtonCommand
 
 [Menu]
+base.color=#000
+alt.base.color=#000
+button.color=#000
+light.color=#000
+mid.light.color=#202735
+dark.color=black
+mid.color=#000
+highlight.color=#25cd8a
+inactive.highlight.color=#6484c3
 inherits=PanelButtonCommand
 frame.top=8
 frame.bottom=8
