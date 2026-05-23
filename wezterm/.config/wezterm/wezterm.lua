@@ -7,9 +7,10 @@ config.enable_wayland = true
 -- Font Settings
 config.font = wezterm.font("JetBrains Mono Nerd Font")
 config.font = wezterm.font_with_fallback({
-	"Jetbrains Mono Nerd Font",
+	"JetBrains Mono Nerd Font",
 	"M+1 Nerd Font",
 	"M+1Code Nerd Font",
+	"Noto Sans CJK JP",
 	"devicons",
 	"icomoon Regular",
 	"Fira Code",
