@@ -14,34 +14,14 @@ for i = 1, 9 do
 		persistent = true,
 	}
 end
-hl.dispatch(hl.dsp.focus { workspace = 7 })
-hl.dispatch(hl.dsp.focus { workspace = 4 })
-hl.dispatch(hl.dsp.focus { workspace = 1 })
 
 local spcace_l = {
 	{ workspace = "special:games", monitor = "DP-1" },
-	{ workspace = "name:comms", monitor = "Dp-2" },
-	{ workspace = "name:launchers", monitor = "DP-2" },
+	{ workspace = "name:Comms", monitor = "DP-2" },
+	{ workspace = "name:Laun", monitor = "DP-2" },
 }
 
 for _, w in ipairs(spcace_l) do
 	hl.workspace_rule(w)
 end
 
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
--- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
--- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
--- hl.window_rule({
---     name  = "no-gaps-wtv1",
---     match = { float = false, workspace = "w[tv1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
--- hl.window_rule({
---     name  = "no-gaps-f1",
---     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
---     rounding    = 0,
--- })

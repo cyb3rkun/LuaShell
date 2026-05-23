@@ -8,7 +8,6 @@ hl.monitor {
 	position = "auto",
 	scale = 1,
 }
----
 ---@type HL.MonitorSpec[]
 -- Modify monitor configuration to fit you're own setup.
 

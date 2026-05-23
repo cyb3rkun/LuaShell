@@ -1,20 +1,19 @@
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
+require "vars.keys"
+require "vars.programs"
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
+require "config.env"
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-require "config.env"
 
 -------------------
 ---- AUTOSTART ----
 -------------------
 require "config.events"
-
-require "vars.keys"
-require "vars.programs"
 
 ------------------
 ---- MONITORS ----
@@ -33,8 +32,6 @@ require "config.perms"
 require "config.general"
 require "config.animations"
 
-require "config.rules.window"
-
 ---------------
 ---- INPUT ----
 ---------------
@@ -46,6 +43,8 @@ require "config.input"
 require "config.binds.navigation"
 require "config.binds.applications"
 require "config.binds.spaces"
+require "config.binds.peek_workspaces"
+require "config.binds.win"
 require "config.binds.extras"
 
 --------------------------------
@@ -54,4 +53,3 @@ require "config.binds.extras"
 require "config.rules.window"
 require "config.rules.workspace"
 require "config.rules.layer"
-

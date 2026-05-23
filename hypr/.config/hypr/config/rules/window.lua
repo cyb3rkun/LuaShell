@@ -8,6 +8,14 @@ local suppressMaximizeRule = hl.window_rule {
 -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule {
+	name = "Comms",
+	match = {
+		class = "(.*[Dd]iscord.*|.*[Ss]ignal.*|.*[Ee]lement.*)",
+	},
+	workspace = "name:Comms",
+
+}
+hl.window_rule {
 	-- Fix some dragging issues with XWayland
 	name = "fix-xwayland-drags",
 	match = {
@@ -22,7 +30,7 @@ hl.window_rule {
 	no_focus = true,
 }
 
-
+-- Game Launchers Workspace rule
 hl.window_rule {
 	name = "Launchers",
 	match = { class = "[Ss]team" },
@@ -55,30 +63,4 @@ hl.window_rule {
 	content = "game",
 	immediate = true,
 	no_anim = true,
-}
--- hl.window_rule {
--- 	match = {
--- 		initial_class = "^firefox"
--- 	},
--- 	opacity = 0.6
--- }
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
--- hl.window_rule({
---     match = { focus = false },
--- 	no_shadow = true,
--- })
-hl.window_rule {
-	name = "move-hyprland-run",
-	match = { class = "hyprland-run" },
-
-	move = "20 monitor_h-120",
-	float = true,
 }
