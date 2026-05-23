@@ -22,13 +22,6 @@ Scope {
 			color: "#00000000"
 			// color: Colors.rgba("#00000066")
 
-			// Rectangle {
-			// 	anchors.bottom: parent.bottom
-			// 	anchors.left: parent.left
-			// 	anchors.right: parent.right
-			// 	height :1
-			// 	color: "#6587b9"
-			// }
 			anchors {
 				top: true
 				left: true
@@ -39,6 +32,7 @@ Scope {
 
 			// Left Anchor
 			Row {
+				id: lAnchor
 				anchors.verticalCenter: parent.verticalCenter
 				anchors.leftMargin: 10
 				anchors.left: parent.left
@@ -51,14 +45,40 @@ Scope {
 					parentWindow: panelBar
 				}
 			}
-			// Center Anchor
 			Row {
+				id: cAnchor
 				anchors.centerIn: parent
 				anchors.verticalCenter: parent.verticalCenter
 				ClockMod {}
 			}
+
+			Row {
+				id: cRAnchor
+				anchors.left: cAnchor.right
+				anchors.verticalCenter: parent.verticalCenter
+				anchors.leftMargin: 10
+
+				SysTray {
+					anchors.verticalCenter: parent.verticalCenter
+					anchors.left: parent.left
+					// parentWindow: root.parentWindow
+				}
+			}
+			Row {
+				id: cLAnchor
+				anchors.right: cAnchor.left
+				anchors.verticalCenter: parent.verticalCenter
+				anchors.rightMargin: 10
+
+				AText {
+					text: "Hello World"
+					color: "white"
+				}
+			}
+
 			// Right Anchor
 			Row {
+				id: rAnchor
 				anchors.right: parent.right
 				anchors.rightMargin: 10
 				anchors.verticalCenter: parent.verticalCenter
