@@ -65,7 +65,11 @@ Item {
 
 				ChamferRect {
 					id: bubble
-					width: isActive ? 50 : Math.max(28, wsLabel.implicitWidth + 12)
+					width: {
+						if (modelData.name.length > 1)
+						return isActive ? Math.max(40, (wsLabel.implicitWidth * 2) + 8) : Math.max(28, wsLabel.implicitWidth + 8);
+						return isActive ? Math.max(40, wsLabel.implicitWidth + 42) : Math.max(28, wsLabel.implicitWidth + 8);
+					}
 					height: 20
 					chamfer: 4
 
