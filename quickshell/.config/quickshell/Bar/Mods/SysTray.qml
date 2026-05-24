@@ -4,11 +4,14 @@ import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 import qs.Singletons
+import qs.Shapes
 import qs.Components
 
-Item {
+ChamferRect {
 	implicitHeight: 20
-	implicitWidth: trayIcons.implicitWidth + 4
+	implicitWidth: trayIcons.implicitWidth + 14
+	fillColor: Colors.colors.bg.inactive
+	chamfer: 4
 
 	RowLayout {
 		id: trayIcons
@@ -31,14 +34,13 @@ Item {
 				onClicked: mouse => {
 					console.log("Clicked Systray Icon");
 					if (mouse.button === Qt.LeftButton) {
-						modelData.activate();
+						menuAnchor.open();
 					} else if (mouse.button === Qt.RightButton) {
 						if (modelData.hasMenu) {
-							console.log("Opening");
-							menuAnchor.open();
-						} else if (mouse.button === Qt.MiddleButton) {
-							modelData.secondaryActivate()
+							modelData.secondaryActivate();
 						}
+					} else if (mouse.button === Qt.MiddleButton) {
+						modelData.activate();
 					}
 				}
 				IconImage {
