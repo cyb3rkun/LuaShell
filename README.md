@@ -53,7 +53,7 @@ or broken symlinks in your home folder. No need to do it manually.
 stow utils
 ```
 
-## ❌ DO THIS:
+## DO THIS:
 These are the base configs needed for the rice to function as
   intended.
 ```bash
