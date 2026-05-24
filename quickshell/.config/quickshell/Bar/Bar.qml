@@ -18,9 +18,7 @@ Scope {
 			required property var modelData
 			screen: modelData
 
-			// color: "#66000000"
 			color: "#00000000"
-			// color: Colors.rgba("#00000066")
 
 			anchors {
 				top: true
@@ -28,7 +26,7 @@ Scope {
 				right: true
 			}
 
-			implicitHeight: 28
+			implicitHeight: 30
 
 			// Left Anchor
 			Row {
@@ -45,46 +43,48 @@ Scope {
 					parentWindow: panelBar
 				}
 			}
-			Row {
-				id: cAnchor
-				anchors.centerIn: parent
-				anchors.verticalCenter: parent.verticalCenter
-				ClockMod {}
-			}
 
 			Row {
-				id: cRAnchor
-				spacing: 20
-				anchors.left: cAnchor.right
+				id: cLAnchor
+				spacing: 6
+				anchors.right: cAnchor.left
 				anchors.verticalCenter: parent.verticalCenter
-				anchors.leftMargin: 10
+				anchors.rightMargin: 8
 
 				// Custom LuaShell System Tray menu
+				// NOTE: Need to use Custom_systtray_popupMenu branch
+				// for this to work
 				// Stray {
 				// 	anchors.verticalCenter: parent.verticalCenter
 				// 	// anchors.left: parent.left
 				// 	pwindow: panelBar
 				// }
+				AudioMod {}
+			}
+
+			Row {
+				id: cAnchor
+				anchors.centerIn: parent
+				anchors.verticalCenter: parent.verticalCenter
+
+				ClockMod {}
+			}
+
+			Row {
+				id: cRAnchor
+				spacing: 8
+				anchors.left: cAnchor.right
+				anchors.verticalCenter: parent.verticalCenter
+				anchors.leftMargin: 8
 
 				// PlatformMenu
-				SysTray {
-					anchors.verticalCenter: parent.verticalCenter
-					// anchors.left: parent.left
-					// parentWindow: root.parentWindow
-				}
-			}
-			Row {
-				id: cLAnchor
-				anchors.right: cAnchor.left
-				anchors.verticalCenter: parent.verticalCenter
-				anchors.rightMargin: 10
+				// AudioMod is more complex and uses system Icon theme
+				// for icons
+				SysTray {}
 
-				AText {
-					text: "Hello World"
-					color: "white"
-				}
+				// AudioM is simpler and uses nerd font symbols for icons
+				// AudioM {}
 			}
-
 			// Right Anchor
 			Row {
 				id: rAnchor
