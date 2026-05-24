@@ -12,6 +12,10 @@
 		"content": "The only falsy values in Lua are false and nil. Unlike most languages, 0 and empty string '' are both truthy."
 	},
 	{
+		"pretext": "KDE Applications",
+		"content": "Will never respect QT theme settings"
+	},
+	{
 		"pretext": "In Lua, you can",
 		"content": "Swap two variables in one line without a temp variable: a, b = b, a"
 	},
@@ -48,6 +52,10 @@
 		"content": "Use __index as a function in a metatable to compute missing keys dynamically, rather than just delegating to another table."
 	},
 	{
+		"pretext": "Lua or python?",
+		"content": "Give me lua please, No space / Indentation Based languages here!"
+	},
+	{
 		"pretext": "A neat trick:",
 		"content": "string.format('%q', str) produces a quoted, escaped Lua string literal — useful for serializing strings safely."
 	},
@@ -72,6 +80,10 @@
 		"content": "Use coroutine.wrap() to turn a coroutine into a plain callable function, making it much easier to use as a stateful iterator."
 	},
 	{
+		"pretext": "Did you know:",
+		"content": "Arrays start at 1"
+	},
+	{
 		"pretext": "A neat trick:",
 		"content": "ipairs stops at the first nil, but pairs iterates all keys including non-sequential ones. Know which you need before iterating a table."
 	},
@@ -90,6 +102,10 @@
 	{
 		"pretext": "In Lua, you can",
 		"content": "Prevent accidental global variable creation by setting a __newindex metamethod on _G that throws an error for unknown keys."
+	},
+	{
+		"pretext": "How to close vim?",
+		"content": "Pull out the power cable :)"
 	},
 	{
 		"pretext": "A neat trick:",
@@ -114,9 +130,5 @@
 	{
 		"pretext": "In Lua, you can",
 		"content": "Capture substrings in patterns using parentheses: string.match('2026-05-21', '(%d+)-(%d+)-(%d+)') returns '2026', '05', '21' as three separate values."
-	},
-	{
-		"pretext": "A neat trick:",
-		"content": "You can give a table a human-readable name for debugging by setting a __name field in its metatable — some error messages and debuggers will show it."
 	}
 ]
