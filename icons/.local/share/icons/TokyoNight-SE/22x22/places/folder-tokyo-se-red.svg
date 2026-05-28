@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   viewBox="0 0 22 22"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="folder-tokyo-se-red.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="18.863636"
+     inkscape:cx="10.973494"
+     inkscape:cy="10.973494"
+     inkscape:window-width="1487"
+     inkscape:window-height="1089"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     fill-rule="nonzero"
+     fill="#7da6ff"
+     fill-opacity="1"
+     d="M 5.5 2.75 L 16.5 2.75 C 18.058594 2.75 19.25 3.941406 19.25 5.5 L 19.25 16.5 C 19.25 18.058594 18.058594 19.25 16.5 19.25 L 5.5 19.25 C 3.941406 19.25 2.75 18.058594 2.75 16.5 L 2.75 5.5 C 2.75 3.941406 3.941406 2.75 5.5 2.75 Z M 5.5 2.75 "
+     id="path1"
+     style="fill:#f85858;fill-opacity:1" />
+  <path
+     fill-rule="nonzero"
+     fill="#1f2335"
+     fill-opacity="1"
+     d="M 6.050781 8.523438 C 6.050781 8.160156 6.140625 7.882812 6.417969 7.609375 C 6.691406 7.425781 6.964844 7.332031 7.332031 7.332031 L 10.449219 7.332031 L 11.640625 8.523438 L 14.667969 8.523438 C 15.035156 8.523438 15.308594 8.617188 15.492188 8.890625 C 15.765625 9.167969 15.859375 9.441406 15.859375 9.714844 L 15.859375 13.382812 C 15.859375 13.75 15.765625 14.023438 15.492188 14.300781 C 15.308594 14.574219 15.035156 14.667969 14.667969 14.667969 L 7.332031 14.667969 C 6.964844 14.667969 6.691406 14.574219 6.507812 14.300781 C 6.234375 14.023438 6.140625 13.75 6.140625 13.382812 L 6.140625 8.523438 Z M 6.050781 8.523438 "
+     id="path2" />
+</svg>
