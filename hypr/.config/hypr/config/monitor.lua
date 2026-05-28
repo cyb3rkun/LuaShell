@@ -34,8 +34,8 @@ local monitors = {
 		scale = 1,
 	},
 }
+require("rules.monitor").monitors(monitors)
 
 for _, m in ipairs(monitors) do
 	hl.monitor(m)
 end
-
