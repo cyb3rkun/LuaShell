@@ -19,13 +19,8 @@ Item {
 		return Hyprland.workspaces.values.filter(w => w.monitor && w.monitor.name === hyprMonitor.name).sort((a, b) => a.id - b.id);
 	}
 
-	// ChamferRect {
-	// 	anchors.fill: parent
-	// 	chamfer: 15
-	// 	fillColor: Colors.rgba("#FFFFFF0F")
-	// }
-
 	Row {
+
 		id: contentRow
 		spacing: 6
 		anchors.centerIn: parent
@@ -66,11 +61,13 @@ Item {
 				ChamferRect {
 					id: bubble
 					width: {
-						if (modelData.name.length > 1)
+						// For special and Named workspaces
+						if (modelData.name.length > 2)
 						return isActive ? Math.max(40, (wsLabel.implicitWidth * 2) + 8) : Math.max(28, wsLabel.implicitWidth + 8);
-						return isActive ? Math.max(40, wsLabel.implicitWidth + 42) : Math.max(28, wsLabel.implicitWidth + 8);
+						// for numbered (normal) workspaces
+						return isActive ? Math.max(40, (wsLabel.implicitWidth * 5) + 8) : Math.max(28, wsLabel.implicitWidth + 8);
 					}
-					height: 20
+					height: Vars.widgitHeight
 					chamfer: 4
 
 					Behavior on width {

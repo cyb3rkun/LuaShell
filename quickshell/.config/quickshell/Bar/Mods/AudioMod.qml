@@ -9,7 +9,7 @@ import qs.Components
 
 ChamferRect {
 	id: audioMod
-	height: 20
+	height: Vars.widgitHeight
 	width: deviceIcons.implicitWidth + 14
 	fillColor: Colors.colors.bg.inactive
 	chamfer: 4
@@ -62,7 +62,7 @@ ChamferRect {
 						return "image://icon/audio-input-microphone-muted-symbolic";
 						return "image://icon/audio-input-microphone-symbolic";
 					}
-					onStatusChanged: console.log("icon status:", status, source)
+					// onStatusChanged: console.log("icon status:", status, source)
 				}
 			}
 			MouseArea {
@@ -82,7 +82,7 @@ ChamferRect {
 					const src = Pipewire.defaultAudioSource;
 					if (mouse.button === Qt.RightButton) {
 						console.log("Launching Volume Control Input Devices");
-						audTriggerProcess.command = ["pavucontrol-qt", "--tab", "3"];
+						audTriggerProcess.command = ["pavucontrol-qt", "--tab", "4"];
 						audTriggerProcess.running = true;
 					}
 					if (mouse.button === Qt.LeftButton) {
@@ -124,7 +124,7 @@ ChamferRect {
 						return "image://icon/audio-volume-medium-symbolic";
 						return "image://icon/audio-volume-high-symbolic";
 					}
-					onStatusChanged: console.log("icon status:", status, source)
+					// onStatusChanged: console.log("icon status:", status, source)
 				}
 				AText {
 					anchors.verticalCenter: parent.verticalCenter

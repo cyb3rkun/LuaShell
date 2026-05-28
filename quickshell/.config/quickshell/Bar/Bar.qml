@@ -18,7 +18,8 @@ Scope {
 			required property var modelData
 			screen: modelData
 
-			color: "#00000000"
+			// color: Colors.rgba("#000000AA")
+			color: "transparent"
 
 			anchors {
 				top: true
@@ -26,7 +27,7 @@ Scope {
 				right: true
 			}
 
-			implicitHeight: 30
+			implicitHeight: Vars.barHeight
 
 			// Left Anchor
 			Row {
@@ -34,13 +35,13 @@ Scope {
 				anchors.verticalCenter: parent.verticalCenter
 				anchors.leftMargin: 10
 				anchors.left: parent.left
-				spacing: 10
+				spacing: Vars.spacing
 				WorkspaceMod {
 					targetScreen: panelBar.modelData
 				}
 				TipMod {
-					targetScreen: panelBar.modelData
-					parentWindow: panelBar
+					// targetScreen: panelBar.modelData
+					// parentWindow: panelBar
 				}
 			}
 
@@ -80,7 +81,10 @@ Scope {
 				// PlatformMenu
 				// AudioMod is more complex and uses system Icon theme
 				// for icons
-				SysTray {}
+				SysTray {
+
+					anchors.verticalCenter: parent.verticalCenter
+				}
 
 				// AudioM is simpler and uses nerd font symbols for icons
 				// AudioM {}

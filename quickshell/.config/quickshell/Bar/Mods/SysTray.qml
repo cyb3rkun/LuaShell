@@ -7,9 +7,11 @@ import qs.Singletons
 import qs.Shapes
 import qs.Components
 
+// TODO: Resize ChamferRect dynamically when removing items to
+// fix warping corners
 ChamferRect {
-	implicitHeight: 20
-	implicitWidth: trayIcons.implicitWidth + 14
+	implicitHeight: Vars.widgitHeight
+	width: trayIcons.implicitWidth + 14
 	fillColor: Colors.colors.bg.inactive
 	chamfer: 4
 
@@ -34,13 +36,13 @@ ChamferRect {
 				onClicked: mouse => {
 					console.log("Clicked Systray Icon");
 					if (mouse.button === Qt.LeftButton) {
-						menuAnchor.open();
+						modelData.activate();
 					} else if (mouse.button === Qt.RightButton) {
 						if (modelData.hasMenu) {
-							modelData.secondaryActivate();
+							menuAnchor.open();
 						}
 					} else if (mouse.button === Qt.MiddleButton) {
-						modelData.activate();
+						modelData.secondaryActivate();
 					}
 				}
 				IconImage {

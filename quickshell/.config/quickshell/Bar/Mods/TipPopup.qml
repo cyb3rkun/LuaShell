@@ -2,50 +2,59 @@ import QtQuick
 import Quickshell
 import Quickshell.Wayland
 import qs.Singletons
+import qs.Shapes
 
 PopupWindow {
-    id: popup
+	id: popup
 
-    property string content: ""
-    property var anchorWindow: null
+	property string content: ""
+	// required property var anchorWindow
 
-    visible: false
-    color: "#CC111122"
+	visible: false
+	// color: Colors.rgba("#000000CC")
+	color: "transparent"
 
-    anchor.window: anchorWindow
-    anchor.rect.x: 0
-    anchor.rect.y: anchorWindow ? anchorWindow.height : 0
+	ChamferRect {
+		width: popup.width
+		height: popup.height
+		fillColor: Colors.rgba("#222b39AA")
+		chamfer: 8
 
-    implicitWidth: contentText.implicitWidth  
-    implicitHeight: contentText.implicitHeight + 24
+	}
+	anchor.window: anchorWindow
+	anchor.rect.x: 0
+	anchor.rect.y: anchor.window ? anchor.window.height : 0
 
-    Timer {
-        id: hideTimer
-        interval: 10000
-        running: false
-        repeat: false
-        onTriggered: popup.visible = false
-    }
+	implicitWidth: Math.min(contentText.implicitWidth + 24, 250)
+	implicitHeight: contentText.implicitHeight + 24
 
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onEntered: hideTimer.stop()
-        onExited: hideTimer.restart()
+	Timer {
+		id: hideTimer
+		interval: 10000
+		running: false
+		repeat: false
+		onTriggered: popup.visible = false
+	}
 
-        Text {
-            id: contentText
-            anchors.centerIn: parent
-            width: popup.width - 24
-            text: popup.content
-            color: "white"
-            wrapMode: Text.WordWrap
-            font.pixelSize: 13
-        }
-    }
+	MouseArea {
+		anchors.fill: parent
+		hoverEnabled: true
+		onEntered: hideTimer.stop()
+		onExited: hideTimer.restart()
 
-    function show() {
-        visible = true
-        hideTimer.restart()
-    }
+		Text {
+			id: contentText
+			anchors.centerIn: parent
+			width: popup.width - 24
+			text: popup.content
+			color: "white"
+			wrapMode: Text.WordWrap
+			font.pixelSize: 13
+		}
+	}
+
+	function show() {
+		visible = true;
+		hideTimer.restart();
+	}
 }

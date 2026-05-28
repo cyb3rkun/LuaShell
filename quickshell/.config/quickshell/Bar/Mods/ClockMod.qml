@@ -6,17 +6,20 @@ import qs.Shapes
 
 Item {
 	// You need to set the width/height of the Item so the Row knows how to space it
-	width: bubble.width
-	height: bubble.height
+	implicitWidth: bubble.width
+	implicitHeight: bubble.height
+	visible: Colors.loaded
+
 
 	ChamferRect {
 		id: bubble
 		// This height will now define the container height
-		height: 20
-		width: timeText.width + 16 // Add padding for the chamfers
+		height: Vars.widgitHeight
+		width: timeText.implicitWidth + 16 // Add padding for the chamfers
 		chamfer: 4
-		fillColor: Colors.rgba(Colors.colors.bg.P2)
+		fillColor: Colors.loaded ? Colors.rgba(Colors.colors.bg.P2) : "transparent"
 		anchors.centerIn: parent
+		visible: Colors.loaded
 
 		AText {
 			id: timeText
