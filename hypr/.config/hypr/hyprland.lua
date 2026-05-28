@@ -1,3 +1,4 @@
+--
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
 require "vars.keys"
