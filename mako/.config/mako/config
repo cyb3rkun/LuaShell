@@ -20,7 +20,7 @@ padding=16, 16, 16, 16
 text-alignment=center
 progress-color= over #6587b9
 max-icon-size=64
-icon-path=/usr/share/icons/Fancy-Dark-Icons
+icon-path=~/.local/share/icons/TokyoNight-SE
 anchor=bottom-right
 
 [urgency=low]
