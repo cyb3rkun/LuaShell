@@ -20,6 +20,9 @@ for configuration and functional workflow enhancements.
   I personally use it to *peek* my name:Comms -> special:comms workspace, 
   but you can use it in your own keybinds to move windows around en
   masse
+  I've also taken the liberty of adding keybinds that allow you to peek
+  any workspace 1-9. simply press SUPER+ALT+n to peek, and press the same
+  once more to un-peek 
 
 ## The Bar:
 Keep clicking the LuaTip Quickshell bar module. You'll get actuall
@@ -83,12 +86,15 @@ NOTE: Will be updated soon
 
 ## 📜 Credits & Licensing
 
-This rice utilizes a modified version of the [Wings-Kvantum](https://github.com/L4ki/Wings-Plasma-Themes) theme by [L4ki], licensed under the **GPLv3 License**.
-
-### Modifications Made:
+ ### modified [Wings-Kvantum](https://github.com/L4ki/Wings-Plasma-Themes) theme by [L4ki], licensed under the **GPLv3 License**.
+#### Modifications Made:
 - Removed the `window-normal` object layers within the core asset SVG 
 (`Wings-Kvantum.svg`) to enforce a pure `#000000` 
 pitch-black background canvas that matches the minimalist terminal aesthetics.
+### modified [Tokyo-Night-SE](https://github.com/ljmill/tokyo-night-icons) theme by [ljmill](https://github.com/ljmill) Licensed under ***GPLv3***.
+#### Modifications made:
+- I added colored versions of the default folder icon by copying it, and
+  changing the fill color values to fit with other Tokyo Night colors.
 
 In accordance with the GPLv3 License, the modified theme assets contained 
 within the `Kvantum/` folder remain fully open-source under the GPLv3.
