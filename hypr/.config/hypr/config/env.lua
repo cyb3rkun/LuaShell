@@ -26,9 +26,3 @@ hl.env("TERM", "wezterm")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 
-hl.on(
-	"hyprland.start",
-	function()
-		hl.exec_cmd "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-	end
-)
