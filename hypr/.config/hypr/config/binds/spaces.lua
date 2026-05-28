@@ -13,6 +13,19 @@ for i = 1, 10 do
 			desc = "Move Window to Workspace " .. wstr,
 		}
 	)
+	-- Move All Windows from active workspace to numbered workspace
+	hl.bind(SUPR .. CTL .. key, function()
+		local src = hl.get_active_workspace()
+		local u = require "dsp"
+		if not src then
+			hl.notification.create {
+				timeout = 5000,
+				text = "No Active workspace",
+			}
+			return
+		end
+		hl.dispatch(u.win.move_all_win(src.config_name, key, true))
+	end)
 end
 
 hl.bind(SUPR .. "S", hl.dsp.workspace.toggle_special "magic", {
