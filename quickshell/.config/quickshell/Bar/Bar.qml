@@ -15,6 +15,7 @@ Scope {
 
 		PanelWindow {
 			id: panelBar
+
 			required property var modelData
 			screen: modelData
 
