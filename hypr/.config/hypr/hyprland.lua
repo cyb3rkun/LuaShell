@@ -16,6 +16,8 @@ require "config.env"
 -------------------
 require "config.events"
 
+Colors = require("vars.colors")
+local theme = require("scripts.theme_loader")
 ------------------
 ---- MONITORS ----
 ------------------
