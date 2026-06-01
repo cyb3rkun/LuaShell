@@ -11,8 +11,11 @@ hl.config {
 		border_size = 1,
 
 		col = {
-			active_border = { colors = { "#6587b9" }, angle = 45 },
-			inactive_border = "#40526c9c",
+			active_border = {
+				colors = { Colors.borders.active },
+				angle = 45,
+			},
+			inactive_border = Colors.borders.inactive,
 		},
 
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -35,9 +38,12 @@ hl.config {
 		-- TODO: Only do shadow on active application
 		shadow = {
 			enabled = true,
-			range = 18,
-			render_power = 8,
-			color = "#191a2480",
+			range = 01,
+			-- render_power = 8,
+			sharp = true,
+			offset = { 1, 1 },
+			color = "#6587b9",
+			color_inactive = "#191a2480",
 		},
 
 		blur = {
