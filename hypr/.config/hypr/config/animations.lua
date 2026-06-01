@@ -165,7 +165,7 @@ hl.animation {
 }
 
 -- Border
--- hl.animation({ leaf = "border",     enabled = true, speed = 4.0,  bezier = "floatIn" })
+hl.animation({ leaf = "fadeShadow",     enabled = true, speed = 1.0,  bezier = "floatIn" })
 
 -- Global
 -- hl.animation({ leaf = "global",     enabled = true, speed = 10,   bezier = "default" })
