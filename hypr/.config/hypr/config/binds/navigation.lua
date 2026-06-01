@@ -5,6 +5,16 @@ hl.bind(
 	{ desc = "Toggle Float" }
 )
 hl.bind(
+	SUPR .. CTL .. "V",
+	hl.dsp.window.cycle_next { floating = true },
+	{ desc = "Cycle through floating windows" }
+)
+hl.bind(
+	SUPR .. CTL .. "Z",
+	hl.dsp.window.cycle_next { floating = false, tiled = true },
+	{ desc = "Cycle through floating windows" }
+)
+hl.bind(
 	SUPR .. "F",
 	hl.dsp.window.fullscreen { action = "toggle" },
 	{ desc = "Toggle Fullscreen" }
@@ -28,4 +38,3 @@ hl.bind(
 	hl.dsp.window.resize(),
 	{ mouse = true, desc = "Resize Window By draggin mouse" }
 )
-
