@@ -10,3 +10,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd "mako"
 	hl.exec_cmd "hyprpaper"
 end)
+hl.on("config.reloaded", function ()
+	Colors.update_colors()
+end)
