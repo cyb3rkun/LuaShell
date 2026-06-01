@@ -10,10 +10,9 @@ local suppressMaximizeRule = hl.window_rule {
 hl.window_rule {
 	name = "Comms",
 	match = {
-		class = "(.*[Dd]iscord.*|.*[Ss]ignal.*|.*[Ee]lement.*)",
+		class = "[Dd]iscord|[Ss]ignal[Ee]lement|[Vv]esktop|[Cc]oncord",
 	},
 	workspace = "name:Comms",
-
 }
 hl.window_rule {
 	-- Fix some dragging issues with XWayland
@@ -42,7 +41,7 @@ hl.window_rule {
 }
 -- Put Game Windows on a special workspace.
 -- I've found that this avoids some issues that usually appear when
--- games lose mouse focus. by just toggling the special workspace, 
+-- games lose mouse focus. by just toggling the special workspace,
 -- a lot of them can be avoided and it efectively works as ALT+TAB
 hl.window_rule {
 	match = { initial_class = "steam_app_\\d+" },
@@ -63,4 +62,11 @@ hl.window_rule {
 	content = "game",
 	immediate = true,
 	no_anim = true,
+}
+
+hl.window_rule {
+	match = {
+		initial_title = "Oklch Color Picker",
+	},
+	float = true,
 }
