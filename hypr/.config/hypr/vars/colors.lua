@@ -1,0 +1,27 @@
+local M = {}
+-- local js = require "ljson"
+-- local home = os.getenv "HOME"
+--
+-- local function get_colors()
+-- 	local colors_file, err =
+-- 		io.open(home .. "/.config/lua-shell/colors.json", "r")
+--
+-- 	if (not colors_file) or err then
+-- 		hl.notification.create {
+-- 			timeout = 5000,
+-- 			text = "Error readding colors file: " .. tostring(err),
+-- 		}
+-- 		return
+-- 	end
+--
+-- 	local colors_s = colors_file:read "*a"
+--
+-- 	local colors = js.decode(colors_s)
+-- 	return colors
+-- end
+--
+-- local function update_colors() _G.Colors = get_colors() or {} end
+--
+-- _G.Colors = get_colors() or {}
+-- M.update_colors = update_colors
+return M
