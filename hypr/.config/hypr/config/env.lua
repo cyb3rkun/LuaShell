@@ -13,7 +13,6 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 hl.env("GDK_BACKEND", "wayland,x11")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("GDK_SCALE", "1")
-hl.env("EDITOR", "nvim")
 hl.env("LANG", "en_US.UTF-8")
 
 hl.env("XMODIFIERS", "@im=fcitx")
@@ -21,7 +20,10 @@ hl.env("SDL_IM_MODULE", "fcitx")
 hl.env("WAYLAND_IM_MODULE", "fcitx")
 hl.env("LC_CTYPE", "ja_JP.UTF-8")
 hl.env("LC_ALL", "en_US.UTF-8")
+
 hl.env("TERM", "wezterm")
+hl.env("EDITOR", "nvim")
+hl.env("XDG_TERMINAL_EXEC", "xdg-terminal-exec")
 
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
