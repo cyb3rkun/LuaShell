@@ -133,6 +133,8 @@ ForegroundVisited=244,215,228
 [General]
 ColorScheme=Kvantum
 Name=Wings-Kvantum
+TerminalApplication=wezterm
+TerminalService=org.wezfurlong.wezterm.desktop
 
 [Icons]
 Theme=TokyoNight-SE
