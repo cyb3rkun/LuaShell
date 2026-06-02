@@ -27,4 +27,5 @@ hl.env("XDG_TERMINAL_EXEC", "xdg-terminal-exec")
 
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
+hl.env("XDG_MENU_PREFIX", "arch-")
 
