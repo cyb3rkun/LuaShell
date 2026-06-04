@@ -1,100 +1,125 @@
-# Theme: Moon (Lua)
-Concept: Lua is a beautifully lightweight and minimal language. This 
-rice was designed to reflect that philosophy by only implementing a 
-bare-essentials UI. Instead of visual clutter, the focus is placed on 
-heavy lifting under the hood, heavily utilizing Hyprland's new Lua API
-for configuration and functional workflow enhancements.
+# 🌕 LuaShell
 
-# Efforts & Lua Integration:
-- Original Assets: Wallpaper & Wlogout icons were designed from scratch
-  by me in Inkscape
+> A Hyprland rice inspired by the Moon and the Lua scripting language — minimal, dark, and precise.
 
-- Keybind Picker I reused a Recursive Descent json parser that I wrote
-  in Lua to create a shortcut picker that parses `hyprctl -j binds` 
-  and hands them to `hyprlauncher`. it can be launched with `SUPER+ALT+K`
+<img width="1920" height="1080" alt="screenshot-2026-06-04-194213" src="https://github.com/user-attachments/assets/e9783925-98b9-406e-a289-8ddef3af6e30" />
 
-- **Custom Dispatcher** (Lua): I implemented a custom utility function 
-  which moves all windows from one workspace to another given `source`
-  and `destination` parameters. it can be called with
-  `require("dsp").windows.move_all_win()`
-  I personally use it to *peek* my name:Comms -> special:comms workspace, 
-  but you can use it in your own keybinds to move windows around en
-  masse
-  I've also taken the liberty of adding keybinds that allow you to peek
-  any workspace 1-9. simply press SUPER+ALT+n to peek, and press the same
-  once more to un-peek 
+---
 
-## The Bar:
-Keep clicking the LuaTip Quickshell bar module. You'll get actuall
-useful Lua Tips.. mostly. Keep clicking, you'll find them eventually
+## ✨ Overview
 
-It includes a workspace module, audio/volume module (powered by
-pavu-control-qt) a simple clock, systray and a powermenu (the red crescent moon) 
-powered by wlogout.
+LuaShell is a dotfiles configuration for Hyprland built around a lunar aesthetic: pitch-black backgrounds, cool blue-white accents, and a clean interface that stays out of your way. The shell layer is powered by [Quickshell](https://quickshell.outfoxxed.me/) and written almost entirely in Lua and QML, keeping the config readable and hackable.
 
-# Dependencies
-for a comprehensive list of dependencies see [DEPS](/DEPS.md)
+**Stack at a glance:**
 
-## Installation
-⚠️**READ IT BEFORE YOU USE IT**
+| Component        | Tool              |
+|------------------|-------------------|
+| Compositor       | Hyprland          |
+| Shell / Bar      | Quickshell        |
+| Terminal         | WezTerm           |
+| Shell            | Fish              |
+| Editor           | Neovim            |
+| Notifications    | Mako              |
+| Launcher         | Hyprlauncher      |
+| Logout           | Wlogout + Hyprshutdown |
+| Fetch            | Fastfetch         |
+| QT Theme         | Kvantum (Wings-Kvantum, modified) |
+| Icons            | Tokyo Night SE    |
+| File Manager     | Dolphin           |
 
-While I did write an `install.sh` script, this is my first time creating 
-a rice, and I've never written a system-wide install-script before. I cannot guarentee 
-that it will work exactly as intended, and it's possible I missed
-some packages, though I did try my best :)
+---
 
-Keep in mind this script is only intended to install dependencies.
-to actually use these dots, please use the stow command
+## 📸 Screenshots
+<img width="1920" height="1080" alt="screenshot-2026-06-04-194339" src="https://github.com/user-attachments/assets/0c7c528a-409f-407c-808e-f6221d6f86e9" />
+<img width="1916" height="205" alt="screenshot-2026-06-04-194322" src="https://github.com/user-attachments/assets/b6515e8f-e12c-4ae8-8247-f6b7f4fd88e6" />
 
-## ❌ DON'T Stow Utils
-Note: This is a private directory containing utilities used throughout 
-this config. They are already relatively symlinked to where they are 
-needed within the repo. Stowing this directory will create unnecessary
-or broken symlinks in your home folder. No need to do it manually.
+<img width="607" height="305" alt="screenshot-2026-06-04-195411" src="https://github.com/user-attachments/assets/2888638a-dcaf-46a9-a85d-998c85c1bb9d" />
 
-```bash 
-stow utils
+---
+
+## 📦 Dependencies
+
+See [DEPS.md](DEPS.md) for the full list. Core requirements:
+
+- `hyprland`
+- `quickshell` + Qt6 modules (`qt6ct`, `qtmultimedia`, `qtimageformats`, `qt6-5compat`, `qt6svg`)
+- `mako` (notifications)
+- `hyprlauncher`, `hyprlock`, `hyprshutdown`, `pyprpaper`
+- `wlogout`
+- `kvantum` (for QT application theming)
+- **Tokyo Night SE** icon pack → install to `/usr/share/icons/` or `~/.local/share/icons/`
+- `wl-clipboard` (screenshots)
+
+Optional but recommended:
+- `wezterm` (the rice was designed around it)
+- `fish` shell
+
+---
+
+## 🚀 Installation
+
+This repo uses [GNU Stow](https://www.gnu.org/software/stow/) to symlink configs into place.
+
+**1. Clone the repo**
+
+```bash
+git clone https://github.com/cyb3rkun/LuaShell ~/.config/LuaShell
+cd ~/.config/LuaShell
 ```
 
-## DO THIS:
-These are the base configs needed for the rice to function as
-  intended.
+**2. Install the core rice configs**
+
 ```bash
 stow -vSt ~ hypr mako quickshell Kvantum assets colors scripts \
-kdeglobals lua-shell fastfetch wlogout
-
+  kdeglobals lua-shell fastfetch wlogout
 ```
-The following are other personal configs that you likely don't need or want
-unless you want my exact terminal config
+
+> ⚠️ Do **not** run `stow utils` — this directory is internal and not meant to be deployed directly.
+
+**3. Optional personal configs** (skip if you have your own terminal/shell setup)
+
 ```bash
 stow nvim wezterm fish
 ```
-Keep in mind that this rice was designed around the wezterm terminal and 
-this specific fish configuration. If you already have a shell and terminal 
-preference, simply use your own and set your terminal's font and 
-background color to match the theme. and if you want, configure fastfetch
-to start with your terminal
 
-# Screenshots
-NOTE: Will be updated soon
-<!-- <img width="1920" height="1080" alt="screenshot-2026-05-23-luancher" src="https://github.com/user-attachments/assets/ff88df3f-deb1-4a15-b36c-25154442586c" /> -->
-<!-- <img width="941" height="640" alt="screenshot-2026-05-23-042204" src="https://github.com/user-attachments/assets/b236b866-2e2a-456d-a649-39e4eefddb21" /> -->
-<!-- <img width="1920" height="1080" alt="screenshot-2026-05-23-041934" src="https://github.com/user-attachments/assets/ef1a64d0-e5b2-4ddb-ac36-9e4dde8c7e75" /> -->
-<!-- <img width="1920" height="1080" alt="screenshot-2026-05-23-041609" src="https://github.com/user-attachments/assets/098b36ed-351e-40d4-a1fb-7d5c32997893" /> -->
-<!-- <img width="1920" height="1080" alt="screenshot-2026-05-23-041417" src="https://github.com/user-attachments/assets/f45f6443-5cce-444c-9db7-a8a120e09e53" /> -->
+**4. Set up QT theming**
 
+- Open `qt6ct` and set the icon theme to `Tokyo Night-SE`
+- For Dolphin to respect the theme, ensure this env var is set:
 
-## 📜 Credits & Licensing
+```bash
+export QT_QPA_PLATFORMTHEME=qt6ct
+```
 
- ### modified [Wings-Kvantum](https://github.com/L4ki/Wings-Plasma-Themes) theme by [L4ki], licensed under the **GPLv3 License**.
-#### Modifications Made:
-- Removed the `window-normal` object layers within the core asset SVG 
-(`Wings-Kvantum.svg`) to enforce a pure `#000000` 
-pitch-black background canvas that matches the minimalist terminal aesthetics.
-### modified [Tokyo-Night-SE](https://github.com/ljmill/tokyo-night-icons) theme by [ljmill](https://github.com/ljmill) Licensed under ***GPLv3***.
-#### Modifications made:
-- I added colored versions of the default folder icon by copying it, and
-  changing the fill color values to fit with other Tokyo Night colors.
+Add this to your shell profile or Hyprland env config.
 
-In accordance with the GPLv3 License, the modified theme assets contained 
-within the `Kvantum/` folder remain fully open-source under the GPLv3.
+---
+
+## 🎨 Customization
+
+### Terminal & Shell
+
+The rice is designed around WezTerm and Fish, but any terminal/shell will work. To match the aesthetic in another terminal, set:
+
+- **Font**: (the font used in the wezterm config)
+- **Background color**: `#000000`
+
+### Colors / Theme
+
+The color palette lives in `lua-shell/.config/lua-shell/`. Edit the color variables there to retheme the Quickshell bar and other Lua-driven components.
+
+### Wallpaper
+
+Wallpapers are managed by `pyprpaper`. Drop your wallpapers into the assets folder and configure `pyprpaper` to point to them.
+
+---
+
+## 📜 Credits & License
+
+- **Kvantum Theme**: Modified from [Wings-Kvantum](https://github.com/L4ki/Wings-Plasma-Themes) by L4ki (GPLv3). The `window-normal` layers were removed from `Wings-Kvantum.svg` to enforce a pure `#000000` background. Modified assets in `Kvantum/` remain GPLv3.
+- **Icons**: [Tokyo Night SE](https://github.com/ljmill/tokyo-night-icons/) by ljmill
+- Everything else is licensed under the [MIT License](LICENSE).
+
+---
+
+<p align="center">Made with 🌕 by cyb3rkun</p>
