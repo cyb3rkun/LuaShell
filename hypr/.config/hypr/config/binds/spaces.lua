@@ -25,7 +25,7 @@ for i = 1, 10 do
 			return
 		end
 		hl.dispatch(u.win.move_all_win(src.config_name, key, true))
-	end)
+	end, { desc = "Move all windows to workspace " .. tostring(i)})
 end
 
 hl.bind(SUPR .. "S", hl.dsp.workspace.toggle_special "magic", {
